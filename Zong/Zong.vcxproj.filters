@@ -1,42 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Zong">
+      <UniqueIdentifier>{6350907C-4F87-910D-F873-7710E4890D0F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Zong\log">
+      <UniqueIdentifier>{D46953F3-C036-AEFE-E94F-9CA6D57BE38C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Zong.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Zong.h" />
+    <ClInclude Include="src\Zong\log\z_log.h">
+      <Filter>Zong\log</Filter>
     </ClInclude>
     <ClInclude Include="src\Zong\z_app.h">
-      <Filter>Header Files</Filter>
+      <Filter>Zong</Filter>
     </ClInclude>
     <ClInclude Include="src\Zong\z_core.h">
-      <Filter>Header Files</Filter>
+      <Filter>Zong</Filter>
     </ClInclude>
     <ClInclude Include="src\Zong\z_entry_point.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Zong\log\z_log.h">
-      <Filter>Header Files</Filter>
+      <Filter>Zong</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Zong\z_app.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Zong\log\z_log.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Zong\log</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Zong\z_app.cpp">
+      <Filter>Zong</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
