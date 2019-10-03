@@ -27,9 +27,15 @@
     <ClInclude Include="src\Zong\z_entry_point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Zong\log\z_log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Zong\z_app.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Zong\log\z_log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
