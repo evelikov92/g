@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zong", "Zong\Zong.vcxproj", "{95B94C6C-E4BE-4070-8449-FCFB39533810}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game", "Game\Game.vcxproj", "{04C970AE-F2FA-4749-B7D1-4FC9D1777E12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95B94C6C-E4BE-4070-8449-FCFB39533810}.Debug|x64.ActiveCfg = Debug|x64
+		{95B94C6C-E4BE-4070-8449-FCFB39533810}.Debug|x64.Build.0 = Debug|x64
+		{95B94C6C-E4BE-4070-8449-FCFB39533810}.Release|x64.ActiveCfg = Release|x64
+		{95B94C6C-E4BE-4070-8449-FCFB39533810}.Release|x64.Build.0 = Release|x64
+		{04C970AE-F2FA-4749-B7D1-4FC9D1777E12}.Debug|x64.ActiveCfg = Debug|x64
+		{04C970AE-F2FA-4749-B7D1-4FC9D1777E12}.Debug|x64.Build.0 = Debug|x64
+		{04C970AE-F2FA-4749-B7D1-4FC9D1777E12}.Release|x64.ActiveCfg = Release|x64
+		{04C970AE-F2FA-4749-B7D1-4FC9D1777E12}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C198122-109F-41CE-9F93-D06257D44439}
+	EndGlobalSection
+EndGlobal
