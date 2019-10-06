@@ -1,5 +1,5 @@
+#include "z_pch.h"
 #include "z_log.h"
-
 
 namespace Zong
 {

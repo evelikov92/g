@@ -18,6 +18,9 @@ project "Zong"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
+	pchheader "z_pch.h"
+	pchsource "Zong/src/z_pch.cpp"
+	
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -28,7 +31,7 @@ project "Zong"
 	{
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/vendor/behavior-tree/include",
-		"%{prj.name}/src/Zong"
+		"%{prj.name}/src"
 	}
 	
 	filter "system:windows"
@@ -68,6 +71,9 @@ project "Game"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	
+	pchheader "pch.h"
+	pchsource "Game/src/pch.cpp"
 
 	files
 	{
@@ -77,8 +83,8 @@ project "Game"
 	
 	includedirs
 	{
+		"Zong/src/",
 		"Zong/vendor/spdlog/include",
-		"Zong/src/"
 	}
 	
 	links

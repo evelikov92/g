@@ -1,8 +1,6 @@
 #pragma once
 
-#include <memory>
-
-#include "z_core.h"
+#include "Zong/z_core.h"
 
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"

@@ -1,3 +1,4 @@
+#include "pch.h"
 #include <Zong.h>
 
 class Game : public Zong::Z_App

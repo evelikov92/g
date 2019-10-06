@@ -9,3 +9,5 @@
 #else
 	#error Zong support only Windows!
 #endif
+
+#define BIT_SHIFT(x) (1 << x)
