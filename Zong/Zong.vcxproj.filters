@@ -4,93 +4,51 @@
     <Filter Include="Zong">
       <UniqueIdentifier>{6350907C-4F87-910D-F873-7710E4890D0F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Zong\event">
-      <UniqueIdentifier>{14605A15-0018-9C62-691F-75BE55F63653}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Zong\event\key">
-      <UniqueIdentifier>{8CE40FFD-78B2-0303-6146-74294DB3DF67}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Zong\event\mouse">
-      <UniqueIdentifier>{8CE2C480-78DB-E3D2-A10D-C9578D65C3DE}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Zong\game">
-      <UniqueIdentifier>{0CACBD5D-7816-72D4-C154-237A2DFE4F29}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Zong\log">
       <UniqueIdentifier>{D46953F3-C036-AEFE-E94F-9CA6D57BE38C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Zong.h" />
-    <ClInclude Include="src\Zong\event\key\z_key_event.h">
-      <Filter>Zong\event\key</Filter>
+    <ClInclude Include="src\Zong\app.h">
+      <Filter>Zong</Filter>
     </ClInclude>
-    <ClInclude Include="src\Zong\event\key\z_key_pressed_event.h">
-      <Filter>Zong\event\key</Filter>
+    <ClInclude Include="src\Zong\core.h">
+      <Filter>Zong</Filter>
     </ClInclude>
-    <ClInclude Include="src\Zong\event\key\z_key_released_event.h">
-      <Filter>Zong\event\key</Filter>
+    <ClInclude Include="src\Zong\entry_point.h">
+      <Filter>Zong</Filter>
     </ClInclude>
-    <ClInclude Include="src\Zong\event\mouse\z_mouse_event.h">
-      <Filter>Zong\event\mouse</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Zong\event\z_event.h">
-      <Filter>Zong\event</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Zong\event\z_event_dispatcher.h">
-      <Filter>Zong\event</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Zong\event\z_event_handler.h">
-      <Filter>Zong\event</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Zong\game\z_game.h">
-      <Filter>Zong\game</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Zong\log\z_log.h">
+    <ClInclude Include="src\Zong\log\log.h">
       <Filter>Zong\log</Filter>
     </ClInclude>
-    <ClInclude Include="src\Zong\z_app.h">
-      <Filter>Zong</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Zong\z_core.h">
-      <Filter>Zong</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Zong\z_entry_point.h">
-      <Filter>Zong</Filter>
-    </ClInclude>
-    <ClInclude Include="src\z_pch.h" />
+    <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\Zong\layers\layer.h" />
+    <ClInclude Include="src\Zong\graphic\window.h" />
+    <ClInclude Include="src\Zong\event\event_handler.h" />
+    <ClInclude Include="src\Zong\event\event_dispatcher.h" />
+    <ClInclude Include="src\Zong\event\event.h" />
+    <ClInclude Include="src\Zong\event\window\window_event.h" />
+    <ClInclude Include="src\Zong\event\key\key_event.h" />
+    <ClInclude Include="src\Zong\event\key\key_released_event.h" />
+    <ClInclude Include="src\Zong\event\key\key_pressed_event.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Zong\event\key\z_key_event.cpp">
-      <Filter>Zong\event\key</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Zong\event\key\z_key_pressed_event.cpp">
-      <Filter>Zong\event\key</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Zong\event\key\z_key_released_event.cpp">
-      <Filter>Zong\event\key</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Zong\event\mouse\z_mouse_event.cpp">
-      <Filter>Zong\event\mouse</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Zong\event\z_event.cpp">
-      <Filter>Zong\event</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Zong\event\z_event_dispatcher.cpp">
-      <Filter>Zong\event</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Zong\event\z_event_handler.cpp">
-      <Filter>Zong\event</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Zong\game\z_game.cpp">
-      <Filter>Zong\game</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Zong\log\z_log.cpp">
-      <Filter>Zong\log</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Zong\z_app.cpp">
+    <ClCompile Include="src\Zong\app.cpp">
       <Filter>Zong</Filter>
     </ClCompile>
-    <ClCompile Include="src\z_pch.cpp" />
+    <ClCompile Include="src\Zong\log\log.cpp">
+      <Filter>Zong\log</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pch.cpp" />
+    <ClCompile Include="src\Zong\layers\layer.cpp" />
+    <ClCompile Include="src\Zong\graphic\window.cpp" />
+    <ClCompile Include="src\Zong\event\event_handler.cpp" />
+    <ClCompile Include="src\Zong\event\event_dispatcher.cpp" />
+    <ClCompile Include="src\Zong\event\event.cpp" />
+    <ClCompile Include="src\Zong\event\window\window_event.cpp" />
+    <ClCompile Include="src\Zong\event\key\key_event.cpp" />
+    <ClCompile Include="src\Zong\event\key\key_pressed_event.cpp" />
+    <ClCompile Include="src\Zong\event\key\key_released_event.cpp" />
   </ItemGroup>
 </Project>

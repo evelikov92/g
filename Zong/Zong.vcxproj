@@ -77,10 +77,10 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>z_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>ZN_PLATFORM_WINDOWS;ZN_BUILD_DLL;ZN_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\behavior-tree\include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\behavior-tree\include;src;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -89,6 +89,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Debug-windows-x86_64\Zong\Zong.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -98,10 +99,10 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>z_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>ZN_PLATFORM_WINDOWS;ZN_BUILD_DLL;ZN_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\behavior-tree\include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\behavior-tree\include;src;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -114,6 +115,7 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Release-windows-x86_64\Zong\Zong.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -123,10 +125,10 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>z_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>ZN_PLATFORM_WINDOWS;ZN_BUILD_DLL;ZN_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\behavior-tree\include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\behavior-tree\include;src;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -139,6 +141,7 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Dist-windows-x86_64\Zong\Zong.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -147,34 +150,41 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Zong.h" />
-    <ClInclude Include="src\Zong\event\key\z_key_event.h" />
-    <ClInclude Include="src\Zong\event\key\z_key_pressed_event.h" />
-    <ClInclude Include="src\Zong\event\key\z_key_released_event.h" />
-    <ClInclude Include="src\Zong\event\mouse\z_mouse_event.h" />
-    <ClInclude Include="src\Zong\event\z_event.h" />
-    <ClInclude Include="src\Zong\event\z_event_dispatcher.h" />
-    <ClInclude Include="src\Zong\event\z_event_handler.h" />
-    <ClInclude Include="src\Zong\game\z_game.h" />
-    <ClInclude Include="src\Zong\log\z_log.h" />
-    <ClInclude Include="src\Zong\z_app.h" />
-    <ClInclude Include="src\Zong\z_core.h" />
-    <ClInclude Include="src\Zong\z_entry_point.h" />
-    <ClInclude Include="src\z_pch.h" />
+    <ClInclude Include="src\Zong\app.h" />
+    <ClInclude Include="src\Zong\core.h" />
+    <ClInclude Include="src\Zong\entry_point.h" />
+    <ClInclude Include="src\Zong\event\key\key_event.h" />
+    <ClInclude Include="src\Zong\event\key\key_pressed_event.h" />
+    <ClInclude Include="src\Zong\event\key\key_released_event.h" />
+    <ClInclude Include="src\Zong\event\window\window_event.h" />
+    <ClInclude Include="src\Zong\event\event.h" />
+    <ClInclude Include="src\Zong\event\event_dispatcher.h" />
+    <ClInclude Include="src\Zong\event\event_handler.h" />
+    <ClInclude Include="src\Zong\graphic\window.h" />
+    <ClInclude Include="src\Zong\layers\layer.h" />
+    <ClInclude Include="src\Zong\log\log.h" />
+    <ClInclude Include="src\pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Zong\event\key\z_key_event.cpp" />
-    <ClCompile Include="src\Zong\event\key\z_key_pressed_event.cpp" />
-    <ClCompile Include="src\Zong\event\key\z_key_released_event.cpp" />
-    <ClCompile Include="src\Zong\event\mouse\z_mouse_event.cpp" />
-    <ClCompile Include="src\Zong\event\z_event.cpp" />
-    <ClCompile Include="src\Zong\event\z_event_dispatcher.cpp" />
-    <ClCompile Include="src\Zong\event\z_event_handler.cpp" />
-    <ClCompile Include="src\Zong\game\z_game.cpp" />
-    <ClCompile Include="src\Zong\log\z_log.cpp" />
-    <ClCompile Include="src\Zong\z_app.cpp" />
-    <ClCompile Include="src\z_pch.cpp">
+    <ClCompile Include="src\Zong\app.cpp" />
+    <ClCompile Include="src\Zong\event\key\key_event.cpp" />
+    <ClCompile Include="src\Zong\event\key\key_pressed_event.cpp" />
+    <ClCompile Include="src\Zong\event\key\key_released_event.cpp" />
+    <ClCompile Include="src\Zong\event\window\window_event.cpp" />
+    <ClCompile Include="src\Zong\event\event.cpp" />
+    <ClCompile Include="src\Zong\event\event_dispatcher.cpp" />
+    <ClCompile Include="src\Zong\event\event_handler.cpp" />
+    <ClCompile Include="src\Zong\graphic\window.cpp" />
+    <ClCompile Include="src\Zong\layers\layer.cpp" />
+    <ClCompile Include="src\Zong\log\log.cpp" />
+    <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
+      <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

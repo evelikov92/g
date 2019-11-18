@@ -1,19 +1,19 @@
-#include "z_pch.h"
-#include "z_app.h"
+#include "pch.h"
+#include "app.h"
 
 namespace Zong
 {
-	Z_App::Z_App()
+	App::App()
 	{
 
 	}
 
-	Z_App::~Z_App()
+	App::~App()
 	{
 
 	}
 
-	void Z_App::run()
+	void App::run()
 	{
 		while (true)
 		{
@@ -27,13 +27,18 @@ namespace Zong
 		}
 	}
 
-	void Z_App::draw()
+	void App::close()
+	{
+
+	}
+
+	void App::draw()
 	{
 	
 	}
 	
-	void Z_App::update()
+	void App::update()
 	{
-	
+
 	}
 }

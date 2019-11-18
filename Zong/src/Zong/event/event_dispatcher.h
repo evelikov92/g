@@ -1,12 +1,12 @@
 #pragma once
 
-#include "Zong/event/z_event.h"
+#include "Zong/core.h"
 
 namespace Zong
 {
 	namespace Event
 	{
-		class ZONG_API Z_Mouse_Event
+		class ZONG_API Event_Dispatcher
 		{
 
 		};

@@ -9,6 +9,11 @@ workspace "Zong"
 	}
 	
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+IncludeDir = {}
+IncludeDir["GLFW"] = "Zong/vendor/GLFW/include"
+
+include "Zong/vendor/GLFW"
 	
 project "Zong"
 	location "Zong"
@@ -18,8 +23,8 @@ project "Zong"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
-	pchheader "z_pch.h"
-	pchsource "Zong/src/z_pch.cpp"
+	pchheader "pch.h"
+	pchsource "Zong/src/pch.cpp"
 	
 	files
 	{
@@ -31,7 +36,14 @@ project "Zong"
 	{
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/vendor/behavior-tree/include",
-		"%{prj.name}/src"
+		"%{prj.name}/src",
+		"%{IncludeDir.GLFW}"
+	}
+	
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 	
 	filter "system:windows"

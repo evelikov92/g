@@ -14,6 +14,6 @@
 #include <functional>
 #include <algorithm>
 
-//#ifdef ZN_PLATFORM_WINDOWS
-//	#include <Windows.h>
-//#endif
+#ifdef ZN_PLATFORM_WINDOWS
+	#include <Windows.h>
+#endif

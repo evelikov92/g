@@ -1,14 +1,10 @@
 #include "pch.h"
 #include <Zong.h>
 
-class Game : public Zong::Z_App
-{
-public:
-	Game() { }
-	~Game() { }
-};
+#include "Zong/app.h"
+#include "game/game.h"
 
-Zong::Z_App* Zong::create_app()
+Zong::App* Zong::create_app()
 {
-	return new Game();
+	return new Game::Game;
 }

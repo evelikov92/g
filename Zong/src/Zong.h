@@ -3,12 +3,12 @@
 // For Use by Games applications
 // Include all header files for engine
 
-#include "Zong/z_app.h"
+#include "Zong/app.h"
 
 // -----Entry Point----------------------
-#include "Zong/z_entry_point.h"
+#include "Zong/entry_point.h"
 // --------------------------------------
 
 // -----Log Logic------------------------
-#include "Zong/log/z_log.h"
+#include "Zong/log/log.h"
 // --------------------------------------

@@ -1,17 +1,19 @@
 #pragma once
 
-#include "z_core.h"
+#include "core.h"
+#include "graphic/window.h"
 
 namespace Zong
 {
-	class ZONG_API Z_App
+	class ZONG_API App
 	{
 	public:
-		Z_App();
-		virtual ~Z_App();
+		App();
+		virtual ~App();
 
 	public:
 		void run();
+		void close();
 
 	private:
 		void draw();
@@ -19,5 +21,5 @@ namespace Zong
 	};
 
 	// To be defined in client
-	Z_App* create_app();
+	App* create_app();
 }
