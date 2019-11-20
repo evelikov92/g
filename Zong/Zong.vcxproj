@@ -156,7 +156,11 @@
     <ClInclude Include="src\Zong\event\key\key_event.h" />
     <ClInclude Include="src\Zong\event\key\key_pressed_event.h" />
     <ClInclude Include="src\Zong\event\key\key_released_event.h" />
-    <ClInclude Include="src\Zong\event\window\window_event.h" />
+    <ClInclude Include="src\Zong\event\mouse\mouse_button_event.h" />
+    <ClInclude Include="src\Zong\event\mouse\mouse_moved_event.h" />
+    <ClInclude Include="src\Zong\event\mouse\mouse_scrolled_event.h" />
+    <ClInclude Include="src\Zong\event\window\window_closed_event.h" />
+    <ClInclude Include="src\Zong\event\window\window_resized_event.h" />
     <ClInclude Include="src\Zong\event\event.h" />
     <ClInclude Include="src\Zong\event\event_dispatcher.h" />
     <ClInclude Include="src\Zong\event\event_handler.h" />
@@ -170,9 +174,11 @@
     <ClCompile Include="src\Zong\event\key\key_event.cpp" />
     <ClCompile Include="src\Zong\event\key\key_pressed_event.cpp" />
     <ClCompile Include="src\Zong\event\key\key_released_event.cpp" />
-    <ClCompile Include="src\Zong\event\window\window_event.cpp" />
+    <ClCompile Include="src\Zong\event\mouse\mouse_button_event.cpp" />
+    <ClCompile Include="src\Zong\event\mouse\mouse_moved_event.cpp" />
+    <ClCompile Include="src\Zong\event\mouse\mouse_scrolled_event.cpp" />
+    <ClCompile Include="src\Zong\event\window\window_resized_event.cpp" />
     <ClCompile Include="src\Zong\event\event.cpp" />
-    <ClCompile Include="src\Zong\event\event_dispatcher.cpp" />
     <ClCompile Include="src\Zong\event\event_handler.cpp" />
     <ClCompile Include="src\Zong\graphic\window.cpp" />
     <ClCompile Include="src\Zong\layers\layer.cpp" />

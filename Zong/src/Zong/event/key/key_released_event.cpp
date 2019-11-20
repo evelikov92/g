@@ -5,6 +5,9 @@ namespace Zong
 {
 	namespace Event
 	{
+		Key_Released_Event::Key_Released_Event(const int code)
+			: Key_Event(code) { }
+
 		std::string Key_Released_Event::to_string() const
 		{
 			std::stringstream ss;

@@ -51,5 +51,10 @@ namespace Zong
 		protected:
 			bool m_Handled = false;
 		};
+
+		inline std::ostream& operator<<(std::ostream& os, const Event& e)
+		{
+			return os << e.to_string();
+		}
 	}
 }

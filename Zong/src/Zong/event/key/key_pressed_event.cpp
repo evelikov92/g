@@ -5,6 +5,9 @@ namespace Zong
 {
 	namespace Event
 	{
+		Key_Pressed_Event::Key_Pressed_Event(const int code, const unsigned int count)
+			: Key_Event(code), m_Repeate_Count(count) { }
+
 		inline unsigned int Key_Pressed_Event::get_repeat_count() const
 		{
 			return this->m_Repeate_Count;
